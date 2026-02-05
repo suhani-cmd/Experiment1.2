@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.filter {
+    margin-bottom: 30px;
+}
+
+select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #dbe2ef;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.tag.electronics {
+    background: #2563eb;
+}
+
+.tag.clothing {
+    background: #93c5fd;
+    color: black;
+}

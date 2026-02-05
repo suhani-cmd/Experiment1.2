@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment1.2.3</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="card">
+    <div class="top-bar">
+    <button class="btn" onmousedown="undo()">Undo</button>
+    </div>
+
+    <div class="draw-area" id="drawArea"></div><br>
+    <div class="count">
+    <p>Circles drawn: <span id="count">0</span></p>
+    </div>
+</div>
+
+<script>
+    let area = document.getElementById("drawArea");
+    let count = 0;
+    area.onmousedown = function (e) {
+        let circle = document.createElement("div");
+        circle.className = "circle";
+        circle.style.left = e.offsetX + "px";
+        circle.style.top = e.offsetY + "px";
+        area.appendChild(circle);
+        count++;
+        document.getElementById("count").innerText = count;
+    }
+    function undo() {
+         if (area.lastChild) {
+            area.removeChild(area.lastChild);
+            count--;
+            document.getElementById("count").innerText = count;
+        }
+    }
+</script>
+</body>
+</html>
